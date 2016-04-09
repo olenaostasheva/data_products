@@ -1,0 +1,71 @@
+---
+title       : Presentation on Temperature
+subtitle    : Guess the mean
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Description of the project
+
+The user can guess the means using the slider.
+
+1. User sets the slider at certain value.
+
+2. The red line indicating the value of the slider moves to its new location.
+
+3. We can see the standard error calculation 
+
+--- .class #id 
+
+## Examples of calculations 
+
+Mu is the input value. Assume it has the value of 78. Below is the way I calculate the mean standard error. 
+
+```{r}
+mse<-mean((airquality$Temp - 78)^2)
+```
+
+The mean squared error will be `r round(mse,2)`
+
+---.class #id
+
+## Example of histogram
+
+Below is the code I used to build histogram.  
+```{r}
+hist(airquality$Temp, xlab='Temperature', col='lightblue',main='Histogram of Temperature')
+```
+
+---.class #id
+
+## Data description and sources
+
+1. The data is taken from the airquality dataset, one of R's datasets. 
+
+2. It represents daily air quality measurements in New York, May to September 1973.
+
+3. There are 154 observations and 6 variables. 
+
+4. I only looked at the value of temperature. 
+
+
+---.class #id
+
+## Significance
+
+This is a cool, simple App that allows to see how your predictions differ from the actual mean. 
+
+---.class #id
+
+## Thank you very much for your attention  
+
+---.class #id
+
+
+
